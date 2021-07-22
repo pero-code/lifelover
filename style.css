@@ -1,0 +1,254 @@
+/*
+Theme Name: lifetema
+Author: the Webcon team
+Version: 1.0
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+:root {
+  --primaryColor: #e3a957;
+  --secondaryColor:#212529;
+  --tertiaryColor:#443017;
+  --white: #fff;
+  --black: #000;
+  --fontSize: 15px;
+  --transition: 0.5s;
+}
+/*************************
+Basic styles
+*************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: var(--fontSize);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Halant", serif;
+}
+
+/*************************
+navigation
+*************************/
+.navigation{
+  width: 20%;
+  position: fixed;
+  left: 0px;
+  background: linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7)),url(img/blog1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.navigation .container{
+  height: 100vh;
+}
+
+.navigation img{
+  width: 50%;
+}
+
+.navigation .nav-link{
+  color: var(--primaryColor)!important;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.navigation .active{
+  color: var(--white)!important;
+}
+
+
+/*************************
+blog
+*************************/
+.blog{
+  width: 80%;
+  margin-left: 20%;
+}
+
+.blog img{
+  width: 100%;
+  height: auto;
+}
+
+.blog .featured-image{
+  flex: 36%;
+  border-right: 1px solid var(--secondaryColor);
+  border-bottom: 1px solid var(--secondaryColor);
+}
+
+.blog .content{
+  flex: 36%;
+  border-right: 1px solid var(--secondaryColor);
+  border-bottom: 1px solid var(--secondaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.blog h2{
+  font-weight: 600;
+}
+
+.blog .metaData{
+  flex: 24%;
+  background: var(--primaryColor);
+  border-right: 1px solid var(--secondaryColor);
+  border-bottom: 1px solid var(--secondaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.blog .metaData a{
+  text-decoration: none;
+  color: var(--secondaryColor);
+  font-weight: 600;
+}
+
+.blog .metaData a:hover{
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.blog .metaData a i{
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.blog .content a{
+  text-decoration: none;
+  color: var(--secondaryColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.blog .content a:hover{
+  color: var(--primaryColor);
+  transition: var(--transition);
+}
+
+/*********************
+single.php stilizacija
+*********************/
+.singleStrana article{
+    flex-wrap: wrap;
+  }
+
+.singleStrana .featured-image{
+    flex: 60%;
+    border: none;
+  }
+
+  .singleStrana .metaData{
+    flex: 40%;
+    border: none;
+  }
+
+  .singleStrana .content{
+    flex: 100%;
+    border: none;
+    padding: 30px;
+  }
+
+
+
+
+
+
+
+/*************************
+RESPONSIVE
+*************************/
+@media (max-width: 990px) {
+  
+  .navigation{
+    width: 100%;
+    top: 0px;
+  }
+
+  .navigation .container{
+    height: auto;
+    flex-direction: row!important;
+  }
+
+  .navigation ul{
+    text-align: right;
+  }
+
+  .navigation .navbar-brand{
+    text-align: left!important;
+  }
+
+  .navigation img{
+    width: 40%;
+  }
+
+
+  .blog{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 90px;
+  }
+
+
+}
+
+
+@media (max-width: 830px){
+  .blog article{
+    flex-wrap: wrap;
+  }
+  .blog .featured-image{
+    flex: 50%;
+  }
+  
+  .blog .content{
+    flex: 50%;
+  }
+  
+  .blog .metaData{
+    flex: 100%;
+    padding:20px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 570px){
+
+  .blog .featured-image{
+    flex: 100%;
+    border:none;
+  }
+  
+  .blog .content{
+    flex: 100%;
+    padding:20px;
+    text-align: center;
+    border:none;
+  }
+  
+  .blog .metaData{
+    flex: 100%;
+    padding:20px 0;
+    text-align: center;
+    border-right:none;
+    border-bottom: 2px solid var(--secondaryColor);
+
+  }
+}
